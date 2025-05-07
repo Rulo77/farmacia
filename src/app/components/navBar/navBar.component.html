@@ -1,30 +1,62 @@
-<header [class.scrolled]="scrolled">
-  <div class="container">
-    <div class="header-content">
-      <div class="logo">
-        <h1>Farmacias L. Ochoa</h1>
+<header class="relative bg-white">
+  
+  <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+    <div class="flex items-center mb-4 md:mb-0">
+      <div class="w-20 h-20 overflow-hidden rounded-full mr-4 border-2 border-pharmacy-teal">
+        <img 
+          src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGhhcm1hY2lzdHx8fHx8fDE2MTUzMDY5MDA&ixlib=rb-1.2.1&q=80&w=300" 
+          alt="L. Ochoa - Propietario" 
+          class="w-full h-full object-cover"
+        />
       </div>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      <div class="mobile-menu-btn" (click)="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div>
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-pharmacy-dark">
+          Farmacias <span class="text-pharmacy-teal">L. Ochoa</span>
+        </h1>
+        <p class="text-gray-600 text-sm md:text-base">
+          Cuidando de su salud desde 1985
+        </p>
       </div>
     </div>
-    <nav class="mobile-nav" [class.open]="mobileMenuOpen">
-      <ul>
-        <li><a href="#inicio" (click)="closeMenu()">Inicio</a></li>
-        <li><a href="#productos" (click)="closeMenu()">Productos</a></li>
-        <li><a href="#nosotros" (click)="closeMenu()">Nosotros</a></li>
-        <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
-      </ul>
+    
+    <nav class="flex flex-wrap justify-center gap-4">
+      <a href="#productos" class="text-pharmacy-dark hover:text-pharmacy-teal font-medium transition">
+        Productos
+      </a>
+      <a href="#nosotros" class="text-pharmacy-dark hover:text-pharmacy-teal font-medium transition">
+        Nosotros
+      </a>
+      <a href="#ubicaciones" class="text-pharmacy-dark hover:text-pharmacy-teal font-medium transition">
+        Ubicaciones
+      </a>
+      <a href="#contacto" class="text-pharmacy-dark hover:text-pharmacy-teal font-medium transition">
+        Contacto
+      </a>
     </nav>
+  </div>
+  
+  <div class="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-pharmacy-teal/80 to-pharmacy-sage/80 z-10"></div>
+    <img 
+      src="https://images.unsplash.com/photo-1563453392212-326f5e854473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGhhcm1hY3l8fHx8fHwxNjE1MzA2OTU3&ixlib=rb-1.2.1&q=80&w=1080" 
+      alt="Farmacia L. Ochoa" 
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="container mx-auto px-4 h-full flex items-center relative z-20">
+      <div class="max-w-2xl">
+        <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 leading-tight">
+          Su salud es nuestra prioridad
+        </h2>
+        <p class="text-white/90 text-lg md:text-xl mb-6">
+          Ofrecemos productos farmacéuticos de la más alta calidad para el cuidado de su salud y bienestar.
+        </p>
+        <a 
+          href="#productos" 
+          class="inline-block bg-white text-pharmacy-teal px-6 py-3 rounded-md font-medium hover:bg-pharmacy-beige transition"
+        >
+          Ver Productos
+        </a>
+      </div>
+    </div>
   </div>
 </header>

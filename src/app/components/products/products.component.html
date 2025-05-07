@@ -1,0 +1,39 @@
+<section id="productos" class="section-container">
+    <h2 class="section-title">Nuestros Productos</h2>
+
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+
+        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+            <button class="px-4 py-1.5 text-sm rounded-full transition bg-gray-100 text-gray-700 hover:bg-gray-200"
+                (click)="filterByCategory('')">
+                Todos
+            </button>
+            @for(category of categories; track $index){
+
+            <button class="px-4 py-1.5 text-sm rounded-full transition bg-gray-100 text-gray-700 hover:bg-gray-200"
+                (click)="filterByCategory(category)">
+                {{category}}
+            </button>
+
+            }
+        </div>
+
+
+        <div class="relative w-full md:w-64">
+            <input type="text" placeholder="Buscar productos..."
+                class="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-pharmacy-teal" />
+            <input class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+        </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @for(product of products; track $index){
+            <app-card />
+        }
+    </div>
+</section>
+
+<!-- image={{product.image}}
+name={{product.name}}
+price={{product.price}}
+location={{product.location}}
+category={{product.category}} -->

@@ -1,4 +1,4 @@
 export const environment = {
-      production: true,
-  apiUrl: 'https://api.farmaciasochoa.com/api/v1'
+  production: true,
+  apiUrl: 'https://fakestoreapi.com'
 };
