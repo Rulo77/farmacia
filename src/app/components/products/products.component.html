@@ -27,13 +27,9 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         @for(product of products; track $index){
-            <app-card />
+            <app-card 
+                [product]="product"
+            ></app-card>
         }
     </div>
 </section>
-
-<!-- image={{product.image}}
-name={{product.name}}
-price={{product.price}}
-location={{product.location}}
-category={{product.category}} -->
