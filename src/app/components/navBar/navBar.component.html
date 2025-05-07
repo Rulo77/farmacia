@@ -1,0 +1,30 @@
+<header [class.scrolled]="scrolled">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <h1>Farmacias L. Ochoa</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav class="mobile-nav" [class.open]="mobileMenuOpen">
+      <ul>
+        <li><a href="#inicio" (click)="closeMenu()">Inicio</a></li>
+        <li><a href="#productos" (click)="closeMenu()">Productos</a></li>
+        <li><a href="#nosotros" (click)="closeMenu()">Nosotros</a></li>
+        <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
